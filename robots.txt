@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://khidma-djibouti-site.vercel.app/sitemap.xml

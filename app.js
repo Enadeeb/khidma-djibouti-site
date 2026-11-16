@@ -26,7 +26,7 @@ document.querySelector('#inquiry-form')?.addEventListener('submit', (event) => {
   event.preventDefault();
   const form = new FormData(event.currentTarget);
   const message = [
-    'مرحباً أستاذ أديب، أرغب بالاستفسار عن خدماتك.',
+    'مرحباً أستاذ أديب، أرغب بالاستفسار عن خدماتك. أرسل تفاصيل الطلب التالية:',
     '',
     `الاسم: ${form.get('name')}`,
     `رقم التواصل: ${form.get('phone')}`,
@@ -35,6 +35,6 @@ document.querySelector('#inquiry-form')?.addEventListener('submit', (event) => {
     `تفاصيل الطلب: ${form.get('details')}`
   ].join('\n');
   const status = document.querySelector('#form-status');
-  status.textContent = 'تم تجهيز الرسالة. راجعها ثم أرسلها في واتساب.';
+  status.textContent = 'تم تجهيز الرسالة. راجع البيانات ثم أرسلها في واتساب.';
   window.open(`https://wa.me/25377534826?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
 });
