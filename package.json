@@ -1,0 +1,11 @@
+{
+  "name": "khidma-djibouti-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "خِدمة جيبوتي — خدمات هندسية وفنية في جيبوتي",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "rm -rf dist && mkdir -p dist && cp index.html styles.css app.js vercel.json dist/ && cp public/manus-routes.json dist/manus-routes.json && cp -r public dist/public"
+  }
+}
