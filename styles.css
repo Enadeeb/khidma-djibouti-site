@@ -29,3 +29,21 @@ input,select,textarea{max-width:100%;line-height:1.6}
 .eyebrow > span:first-child{width:34px;height:2px;flex:0 0 34px;background:var(--orange);display:inline-block}
 .eyebrow > span:last-child{width:auto;height:auto;flex:1 1 auto;background:transparent;display:inline;overflow-wrap:break-word}
 @media(max-width:600px){.eyebrow{align-items:flex-start;gap:10px}.eyebrow > span:last-child{line-height:1.5}}
+
+/* Engagement improvements: mobile contact CTA, FAQ and gentle reveal */
+.mobile-whatsapp{display:none}
+.faq{max-width:1440px;margin:auto;padding-top:96px;padding-bottom:96px;border-top:1px solid var(--line);display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(30px,8vw,110px)}
+.faq-heading h2{font-size:clamp(2.4rem,4.7vw,5rem);line-height:1.08;letter-spacing:-.055em;margin:0;font-weight:600}
+.faq-heading h2 span{color:var(--orange)}
+.faq-list{border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line);padding:0 4px}
+.faq-list summary{cursor:pointer;list-style:none;padding:22px 0;font-size:1.05rem;font-weight:600;display:flex;justify-content:space-between;gap:20px;line-height:1.5}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:'+';color:var(--orange);font-family:Arial,sans-serif;font-size:1.4rem;font-weight:400}
+.faq-list details[open] summary::after{content:'−'}
+.faq-list details p{max-width:680px;color:var(--muted);margin:0 0 22px;line-height:1.9;overflow-wrap:break-word}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.is-visible{opacity:1;transform:none}
+@media(max-width:900px){.faq{grid-template-columns:1fr;gap:30px;padding-top:72px;padding-bottom:72px}}
+@media(max-width:600px){.mobile-whatsapp{position:fixed;display:flex;z-index:20;bottom:14px;left:18px;right:18px;align-items:center;justify-content:center;gap:12px;padding:14px 18px;background:var(--orange);color:var(--paper);box-shadow:0 10px 30px rgba(16,42,42,.22);font-weight:700;border:1px solid rgba(16,42,42,.18)}.faq{padding-top:62px;padding-bottom:62px}.faq-list summary{font-size:.98rem;padding:18px 0}.faq-list details p{font-size:.9rem}.site-footer{padding-bottom:82px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
